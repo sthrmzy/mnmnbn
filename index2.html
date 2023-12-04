@@ -22,7 +22,7 @@
         </nav>
     </header>
 
-    <div id="jogo" class="secao">
+    <div id="jogo" class="secao visible">
         <!-- Conteúdo da Sessão Jogo -->
         <div class="container">
             <!-- Conteúdo retangular da Sessão Jogo -->
@@ -31,24 +31,40 @@
 
     <div id="sobre" class="secao">
         <!-- Conteúdo da Sessão Sobre -->
-        <h2>Título da Sessão Sobre</h2>
-        <p>Texto da Sessão Sobre</p>
+        <h2>Quem somos?</h2>
+        <p>Bem-vindo(a) ao mundo fascinante do SAEP the game, um emocionante jogo de RPG baseado nas complexas questões da prova SAEP (Sistema de Avaliação da Educação Profissional), um desafio que testa não apenas seu conhecimento tecnológico, mas também suas habilidades de tomada de decisão.</p>
+        <h2>História</h2>
+        <p>No ano de 2050, o mundo é dominado pela tecnologia avançada e inovações constantes. A Sociedade de Avaliação da Educação Profissional (SAEP) assume um papel crucial na identificação dos líderes do futuro, oferecendo desafios e oportunidades para os jovens brilhantes que desejam se destacar na área tecnológica.
+
+            Você, um(a) jovem aspirante a profissional da tecnologia, é convidado(a) a participar da Jornada SAEP, uma série de desafios que abrangem diversas disciplinas tecnológicas, desde inteligência artificial até segurança cibernética. Sua missão é superar obstáculos, tomar decisões estratégicas e alcançar o topo da classificação.</p>
     </div>
 
     <div id="contato" class="secao">
-        <!-- Conteúdo da Sessão Contato -->
+        <h2>Entre em Contato</h2>
+        <form id="formularioContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="duvida">Dúvida:</label>
+            <textarea id="duvida" name="duvida" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
 
-
-    <img id="pato" src="pato.gif" alt="Pato Andando">
+    
     
     <footer>
+        <img id="pato" src="pato.gif" alt="Pato Andando">
         <p> © 2023 Firjan SENAI Petrópolis</p>
     </footer>
 
-
     <script src="script2.js"></script>
+
 
 </body>
 </html>

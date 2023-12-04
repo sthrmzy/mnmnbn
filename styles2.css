@@ -10,6 +10,10 @@
     /* Adicione outros formatos de fonte, se necessário, como woff, woff2, etc. */
 }
 
+body, html {
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -18,6 +22,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     background-color: #55749e; /* Adicione uma cor de fundo opcional */
+    transition: background 0.5s ease;
 }
 
 header {
@@ -25,6 +30,7 @@ header {
 }
 
 .título {
+    margin-top: 30px;
     max-width: 20%;
     height: auto;
     animation: floatAnimation 2s ease-in-out infinite;
@@ -80,19 +86,21 @@ nav a:hover {
 footer {
     font-family: 'MeuTexto', sans-serif;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #285073;
     width: 100%;
     color: azure;
+    position: relative;
 }
 
 #pato {
-    max-width: 50px; /* Ajuste conforme necessário */
+    max-width: 50px;
     height: auto;
-    margin-top: auto; /* Cola o pato ao chão do monitor */
+    margin-top: auto;
     position: absolute;
+    bottom: 100%; /* Posiciona o pato acima da borda do footer */
     left: 0;
-    animation: andarPato 5s linear infinite; /* Ajuste a duração conforme necessário */
+    animation: andarPato 10s linear infinite;
 }
 
 @keyframes andarPato {
@@ -100,6 +108,90 @@ footer {
         left: 0;
     }
     100% {
-        left: 100%; /* Mova o pato para a direita (100% do contêiner pai) */
+        left: 100%;
     }
 }
+
+
+
+
+.secao {
+   
+    text-align: center;
+    max-width: 600px; /* Ajuste conforme necessário para limitar a largura do conteúdo */
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+#sobre h2 {
+    font-family: 'MeuTexto2', sans-serif;
+}
+
+#sobre p {
+    font-family: 'MeuTexto', sans-serif;
+}
+
+.secao {
+    display: none;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Adiciona uma transição de 0.5 segundos ao desvanecer */
+}
+
+.mostrar {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+
+
+
+.secao{
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+   
+}
+
+h2 {
+    font-family: 'MeuTexto2', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-color: #285073;
+}
+
+/* ... Outras regras de estilo ... */
+
+button {
+    font-family: 'MeuTexto2', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 0; /* Ajuste este valor para alterar o arredondamento das bordas */
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.1); /* Ajuste este valor para alterar o nível de escala da animação */
+}
+
+/* ... Outras regras de estilo
