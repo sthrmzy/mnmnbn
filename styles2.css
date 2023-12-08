@@ -160,18 +160,34 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+    position: relative; /* Permite o posicionamento absoluto dos elementos filhos */
+    width: 60vh;
+}
+
+#duvida{
+    height: 15vh;
 }
 
 label {
     margin-top: 10px;
+    display: flex;
+    align-items: left;
+    left: 0;
+    top: -20px; /* Ajuste a distância conforme necessário */
+    font-family: 'MeuTexto2', sans-serif; /* Substitua 'NovaFonte' pela fonte desejada */
+    color: #ffffff; /* Cor do texto */
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 3px;
+    border: 2px solid #333; /* Ajuste a largura da borda conforme necessário */
+    border-radius: 0; /* Bordas quadradas */
     background-color: #285073;
+    color: #ffffff; /* Cor do texto */
+    font-family: 'MeuTexto', sans-serif; /* Fonte do texto */
+    position: relative; /* Adiciona um contexto de posicionamento para elementos filhos absolutos */
 }
 
 /* ... Outras regras de estilo ... */
@@ -194,4 +210,5 @@ button:hover {
     transform: scale(1.1); /* Ajuste este valor para alterar o nível de escala da animação */
 }
 
-/* ... Outras regras de estilo
+
+
